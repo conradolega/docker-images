@@ -1,0 +1,10 @@
+version: '2.1'
+services:
+  app:
+    build: ./flask
+    ports:
+      - '5000:5000'
+  db:
+    build: ./postgres
+    ports:
+      - '54321:5432'
