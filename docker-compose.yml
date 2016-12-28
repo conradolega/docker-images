@@ -4,6 +4,8 @@ services:
     build: ./flask
     ports:
       - '5000:5000'
+    volumes:
+      - ./flask/app:/app
   db:
     build: ./postgres
     ports:
