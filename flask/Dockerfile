@@ -1,12 +1,6 @@
-FROM ubuntu:xenial
+FROM python:3.5
 RUN apt-get update && apt-get install -y \
-  libpq-dev \
-  software-properties-common
-RUN add-apt-repository ppa:fkrull/deadsnakes
-RUN apt-get update && apt-get install -y \
-  python3.5 \
-  python3.5-dev \
-  python3-pip
+  libpq-dev
 RUN pip3 install \
   flask \
   psycopg2
