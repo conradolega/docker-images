@@ -19,7 +19,7 @@ while not cur and retries < 5:
         cur = conn.cursor()
     except psycopg2.OperationalError as e:
         retries += 1
-        sleep(5)
+        time.sleep(5)
 
 if not cur:
     print('Unable to connect to database after 5 retries')
