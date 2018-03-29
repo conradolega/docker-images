@@ -7,6 +7,10 @@ services:
     volumes:
       - ./flask/app:/app
   db:
-    build: ./postgres
+    image: postgres:10.3-alpine
+    restart: always
+    environment:
+        POSTGRES_USER: app
+        POSTGRES_PASSWORD: password
     ports:
       - '54321:5432'
